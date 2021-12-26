@@ -1,0 +1,192 @@
+$primary_color:#9356DC;
+$secondary_color:#FF79DA;
+$tertiary_color:#99E2D0;
+$button:linear-gradient(to bottom right, $secondary_color, $primary_color);
+$background_general:#f2f2f2;
+$dishcounter:7;
+$dishdelay:200ms;
+.head{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 20px;
+    text-align: left;
+    img{
+        width: 50%;
+    }
+    i{
+        font-size: 30px;
+        margin: 10px 60px 10px 50px;
+    }
+}
+.top_img{
+
+    img{
+    width: 100%;
+     }
+}
+.body_menu{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 0px 20px;
+    background-color: $background_general;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: relative;
+    top: -50px;
+    margin-bottom: -50px;
+}
+.name{
+    display: flex;
+    justify-content: space-between;
+}
+.heart{
+    font-size: 40px;
+    margin: 20px 0px 20px 0px;
+    display: block;
+    &__nolike{
+        opacity: 1;
+    }
+    &__like{
+        color:red;
+        //opacity: 0;
+    }
+}
+.ligne{
+    width: 50px;
+    margin-top: -15px;
+    border-top: 3px solid $tertiary_color;
+}
+@keyframes loading_cards{
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.plat{
+    display: flex;
+    flex-direction: column;
+    &__card{
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        border-radius: 20px;
+        margin: 5px 0px 10px 0px;
+        box-shadow: 3px 3px 5px silver;
+        animation: loading_cards 1500ms;
+        animation-fill-mode: both;
+        @for $i from 3 to $dishcounter+2{
+            &:nth-child(#{$i}){
+                animation-delay: $dishdelay * $i;
+                    }
+        }
+        &__body{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            margin: 0px 20px 0px 20px;  
+            &__title{
+                margin: 10px 0px 0px 0px;
+                font-weight: bold;
+            }          
+            &__subtitle{
+                width: 100%;
+                margin: 0px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                &__text{
+                    text-align: left;
+                    margin: 5px 0px 15px 0px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                }
+                &__price{
+                    text-align: right;
+                    font-weight: bold;
+                    margin: 5px 0px 15px 0px;
+                }
+            }
+        }
+        &__check{
+            width: 0px;
+            background-color: $tertiary_color;
+            visibility: hidden;
+            color: white;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            text-align: center;
+            padding: 20px 0px 20px 0px;
+
+
+        }
+        &__body:hover + &__check{
+            width: 80px;
+            font-size: 20px;
+            cursor: pointer;
+            visibility: visible;
+            transition: 500ms;
+            i{transform: rotate(360deg);
+            transition: 500ms;
+            }
+        }
+    }
+}
+.cta_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:$background_general;
+    padding: 40px 0px 70px 0px;
+
+    button{
+        border:none;
+        width: 200px;
+        height: 50px;
+        border-radius: 30px;
+        background:$button;
+        color: white;
+        box-shadow:silver 3px 3px 3px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+.footer{
+    background-color: black;
+    color: #fff;
+    padding: 10px 0px 10px 20px;
+    font-size: 20px;
+    &__title{
+        font-style: italic;
+        font-weight: 900;
+        padding-bottom: 20px;
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        p{
+            margin-top: -7px;
+        }
+        i{
+            margin-right: 10px;
+        }
+    }
+    &__restau, &__partner{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        p{
+            margin-top: 1px ;
+        }
+    }
+
+}

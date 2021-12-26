@@ -1,0 +1,192 @@
+$primary_color:#9356DC;
+$secondary_color:#FF79DA;
+$tertiary_color:#99E2D0;
+$button:linear-gradient(to bottom right, $secondary_color, $primary_color);
+$background_general:#f2f2f2;
+body{
+    width: device-width;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    text-decoration: none;
+}
+body img{
+    max-width: 100%;
+    height: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.logo{
+    border-radius: 0px;
+}
+body a{
+    text-decoration: none;
+}
+.head{
+    margin:2% auto 1% auto;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+   
+}
+.body{
+    &__head{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+         h1, h2{
+            margin: 5%;
+            text-align: center;
+        }
+        &__place{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            background-color: darken($background_general, $amount: 20);
+            i{
+                margin : 4% 3% 2% 7%;
+            }
+        }
+        &__cta{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: $background_general;
+        }
+    }
+}
+.cta_button{
+    width: 60%;
+    height: 50px;
+    color: #fff;
+    background: $button;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 5% auto 15% auto;
+    text-align: center;
+    flex-direction: column;
+    font-size: 18px;
+    flex-wrap: nowrap;
+}
+/*revoir les puces*/
+.fonctionnement h2{
+    margin-left: 20px;
+}
+.list{ 
+    counter-reset: list_puce;
+    li{
+        background-color: $background_general;
+        border-radius: 30px;
+        box-shadow: silver 5px 5px 5px;
+        padding: 15px;
+        margin: 10px 0px 10px -30px;
+        list-style-type: none;
+        counter-increment: list_puce;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        i{
+            margin: 0px 20px 0px 20px;
+        }
+        &:before{
+            padding: 2px 7px 2px 7px;
+            color:white;
+            content: counter(list_puce);
+            background-color: $primary_color;
+            border-radius: 50%;
+        }
+        &:hover{
+            background: $tertiary_color;
+        }
+    }
+}
+
+.cards{
+    background-color: $background_general;
+    padding: 0% 5% 0% 5%;
+}
+.card_restaurant{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    object-fit: contain;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 0px 40px 0px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px silver;
+    img{
+        width: 100%;
+        height: 75%;
+    }
+    &__new{
+        font-size: 22px;
+        color: darken($tertiary_color, 40%);
+        justify-content: center;
+        height: 30px;
+        background-color: $tertiary_color;
+        position: absolute;
+        z-index: 2;
+        margin: 10% 4% 70% 60%;
+        padding: 7px 15px 0px 15px;
+        border-radius: 2px;
+    }
+    &__body{
+        width: 100%;
+        height: 25%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    &__text{
+        color: black;
+        font-size: 20px;
+        p{
+            margin: 5px 0px 5px 10px;
+        }
+        &__name{
+            font-weight: bold;
+        }
+    }
+}
+.heart{
+    font-size: 40px;
+    margin: 20px 20px 20px 0px;
+    &:hover{
+        background: $button;
+    }
+}
+.footer{
+    background-color: black;
+    color: #fff;
+    padding: 10px 0px 10px 20px;
+    font-size: 20px;
+    &__title{
+        font-style: italic;
+        font-weight: 900;
+        padding-bottom: 20px;
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        p{
+            margin-top: -7px;
+        }
+        i{
+            margin-right: 10px;
+        }
+    }
+    &__restau, &__partner{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        p{
+            margin-top: 1px ;
+        }
+    }
+}

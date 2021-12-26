@@ -1,0 +1,12 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./style_sass.scss:./CSS/style.css",
+    "style_restaurant": "sass --watch ./CSS/style_restaurant.scss:./CSS/style_restaurant.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
