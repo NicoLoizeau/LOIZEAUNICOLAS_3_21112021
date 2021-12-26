@@ -1,5 +1,23 @@
+@font-face {
+  font-family: "roboto";
+  src: url("font/Roboto/Roboto-Black.ttf") format("truetype"), url("font/Roboto/Roboto-BlackItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Bold.ttf") format("truetype"), url("font/Roboto/Roboto-BoldItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Italic.ttf") format("truetype"), url("font/Roboto/Roboto-Light.ttf") format("truetype"), url("font/Roboto/Roboto-LightItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Medium.ttf") format("truetype"), url("font/Roboto/Roboto-MediumItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Regular.ttf") format("truetype"), url("font/Roboto/Roboto-Thin.ttf") format("truetype"), url("font/Roboto/Roboto-ThinItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("font/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+}
+p {
+  font-family: "roboto";
+  font-weight: 100;
+}
+
+h1, h2 {
+  font-family: "Shrikhand";
+  font-weight: 100;
+}
+
 body {
-  width: device-width;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-left: 10%;
@@ -101,7 +119,7 @@ body a {
   border-radius: 50%;
 }
 .list li:hover {
-  background: #99E2D0;
+  background: #e4d5f6;
 }
 
 .cards {

@@ -105,6 +105,7 @@
 .plat__card__body__title {
   margin: 10px 0px 0px 0px;
   font-weight: bold;
+  text-overflow: ellipsis;
 }
 .plat__card__body__subtitle {
   width: 100%;
@@ -113,6 +114,8 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .plat__card__body__subtitle__text {
   text-align: left;
@@ -120,8 +123,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .plat__card__body__subtitle__price {
+  min-width: 80px;
   text-align: right;
   font-weight: bold;
   margin: 5px 0px 15px 0px;

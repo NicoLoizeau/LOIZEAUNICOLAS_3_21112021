@@ -90,10 +90,11 @@ $dishdelay:200ms;
             display: flex;
             flex-direction: column;
             border-radius: 20px;
-            margin: 0px 20px 0px 20px;  
+            margin: 0px 20px 0px 20px;
             &__title{
                 margin: 10px 0px 0px 0px;
                 font-weight: bold;
+                text-overflow: ellipsis;
             }          
             &__subtitle{
                 width: 100%;
@@ -102,14 +103,19 @@ $dishdelay:200ms;
                 flex-direction: row;
                 flex-wrap: nowrap;
                 justify-content: space-between;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 &__text{
                     text-align: left;
                     margin: 5px 0px 15px 0px;
                     display: flex;
                     flex-direction: row;
                     flex-wrap: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 &__price{
+                    min-width: 80px;
                     text-align: right;
                     font-weight: bold;
                     margin: 5px 0px 15px 0px;
