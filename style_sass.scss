@@ -3,6 +3,7 @@ $secondary_color:#FF79DA;
 $tertiary_color:#99E2D0;
 $button:linear-gradient(to bottom right, $secondary_color, $primary_color);
 $background_general:#f2f2f2;
+
 @font-face {
     font-family: "roboto";
     src: url("font/Roboto/Roboto-Black.ttf") format('truetype'),
@@ -73,9 +74,11 @@ body a{
             justify-content: center;
             flex-direction: row;
             flex-wrap: nowrap;
+            align-items: center;
             background-color: darken($background_general, $amount: 20);
             i{
-                margin : 4% 3% 2% 7%;
+                font-size: 20px;
+                margin-right: 2%;
             }
         }
         &__cta{
@@ -106,6 +109,12 @@ body a{
 }
 .list{ 
     counter-reset: list_puce;
+    @media screen and (min-width: 769px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 20px;
+    }
     li{
         background-color: $background_general;
         border-radius: 30px;
@@ -117,6 +126,9 @@ body a{
         display: flex;
         flex-direction: row;
         align-items: center;
+        @media screen and (min-width: 769px) {
+            max-width: 200px;
+        }
         i{
             margin: 0px 20px 0px 20px;
         }
@@ -136,6 +148,16 @@ body a{
 .cards{
     background-color: $background_general;
     padding: 0% 5% 0% 5%;
+    @media screen and (min-width: 769px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        h3{
+            width: 100%;
+        }
+    }
+
 }
 .card_restaurant{
     width: 100%;
@@ -148,6 +170,9 @@ body a{
     background-color: #fff;
     border-radius: 30px;
     box-shadow: 10px 10px 10px silver;
+    @media screen and (min-width: 769px) {
+        max-width: 45%;
+    }
     img{
         width: 100%;
         height: 75%;
@@ -155,12 +180,10 @@ body a{
     &__new{
         font-size: 22px;
         color: darken($tertiary_color, 40%);
-        justify-content: center;
         height: 30px;
         background-color: $tertiary_color;
         position: absolute;
         z-index: 2;
-        margin: 10% 4% 70% 60%;
         padding: 7px 15px 0px 15px;
         border-radius: 2px;
     }
@@ -185,9 +208,24 @@ body a{
 }
 .heart{
     font-size: 40px;
-    margin: 20px 20px 20px 0px;
-    &:hover{
-        background: $button;
+    margin: 20px 0px 20px 0px;
+    position: absolute;
+    right: 40px;
+    z-index: 2;
+    &__nolike{
+        opacity: 1;
+        &:hover{
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+    &__like{
+        color:red;
+        opacity: 0;
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
     }
 }
 .footer{
