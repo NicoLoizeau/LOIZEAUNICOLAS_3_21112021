@@ -19,14 +19,14 @@ $background_general:#f2f2f2;
     url("font/Roboto/Roboto-Thin.ttf") format('truetype'),
     url("font/Roboto/Roboto-ThinItalic.ttf") format('truetype');
 }
-    @font-face {
+@font-face {
     font-family: "Shrikhand";
     src: url("font/Shrikhand/Shrikhand-Regular.ttf") format('truetype');
     
 }
-p{
+p a{
     font-family: "roboto";
-    font-weight: 100;
+    font-weight: 400;
 
 }
 h1 h2{
@@ -39,6 +39,7 @@ body{
     flex-direction: column;
     margin-left: 10%;
     text-decoration: none;
+    z-index: 2;
 }
 body img{
     max-width: 100%;
@@ -96,7 +97,6 @@ body a{
 }
 .cta_button{
     width: 60%;
-    height: 50px;
     color: #fff;
     background: $button;
     border-radius: 30px;
@@ -107,6 +107,18 @@ body a{
     flex-direction: column;
     font-size: 18px;
     flex-wrap: nowrap;
+    button{
+        width: 100%;
+        height: 50px;   
+        border:none;
+        border-radius: 30px;
+        background:$button;
+        color: white;
+        box-shadow:silver 3px 3px 3px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
 }
 /*revoir les puces*/
 .fonctionnement h2{
@@ -114,11 +126,11 @@ body a{
 }
 .list{ 
     counter-reset: list_puce;
+    margin-right: 20px;
     @media screen and (min-width: 769px) {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-right: 20px;
     }
     li{
         background-color: $background_general;
@@ -155,7 +167,7 @@ body a{
 
 .cards{
     background-color: $background_general;
-    padding: 5% 5% 0% 5%;
+    padding: 5% 5% 5% 5%;
     @media screen and (min-width: 769px) {
         display: flex;
         flex-direction: row;
@@ -191,7 +203,7 @@ body a{
         background-color: $tertiary_color;
         position: absolute;
         right: 10px;
-        z-index: 2;
+        z-index: 3;
         padding: 7px 15px 0px 15px;
         border-radius: 2px;
     }
@@ -252,6 +264,12 @@ body a{
         }
         i{
             margin-right: 10px;
+        }
+        a{
+            margin-top: -4px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #fff;
         }
     }
     &__restau, &__partner{
