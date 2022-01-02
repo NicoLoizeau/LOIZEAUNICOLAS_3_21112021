@@ -44,13 +44,26 @@ $dishdelay:200ms;
 .heart{
     font-size: 40px;
     margin: 20px 0px 20px 0px;
-    display: block;
+    position: absolute;
+    right: 40px;
+    z-index: 2;
     &__nolike{
         opacity: 1;
+        &:hover{
+            opacity: 0;
+            cursor: pointer;
+        }
     }
     &__like{
-        color:red;
-        //opacity: 0;
+        background: $button;
+        background-clip: text;
+        color: transparent;
+        opacity: 0;
+        &:hover{
+            transition: 300ms;
+            opacity: 1;
+            cursor: pointer;
+        }
     }
 }
 .ligne{
@@ -134,7 +147,7 @@ $dishdelay:200ms;
 
 
         }
-        &__body:hover + &__check{
+        &__body:active + &__check{
             width: 80px;
             font-size: 20px;
             cursor: pointer;

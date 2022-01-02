@@ -38,13 +38,27 @@
 .heart {
   font-size: 40px;
   margin: 20px 0px 20px 0px;
-  display: block;
+  position: absolute;
+  right: 40px;
+  z-index: 2;
 }
 .heart__nolike {
   opacity: 1;
 }
+.heart__nolike:hover {
+  opacity: 0;
+  cursor: pointer;
+}
 .heart__like {
-  color: red;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.heart__like:hover {
+  transition: 300ms;
+  opacity: 1;
+  cursor: pointer;
 }
 
 .ligne {
@@ -142,14 +156,14 @@
   text-align: center;
   padding: 20px 0px 20px 0px;
 }
-.plat__card__body:hover + .plat__card__check {
+.plat__card__body:active + .plat__card__check {
   width: 80px;
   font-size: 20px;
   cursor: pointer;
   visibility: visible;
   transition: 500ms;
 }
-.plat__card__body:hover + .plat__card__check i {
+.plat__card__body:active + .plat__card__check i {
   transform: rotate(360deg);
   transition: 500ms;
 }
