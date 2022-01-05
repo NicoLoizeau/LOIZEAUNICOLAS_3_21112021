@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "roboto";
+  src: url("font/Roboto/Roboto-Black.ttf") format("truetype"), url("font/Roboto/Roboto-BlackItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Bold.ttf") format("truetype"), url("font/Roboto/Roboto-BoldItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Italic.ttf") format("truetype"), url("font/Roboto/Roboto-Light.ttf") format("truetype"), url("font/Roboto/Roboto-LightItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Medium.ttf") format("truetype"), url("font/Roboto/Roboto-MediumItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Regular.ttf") format("truetype"), url("font/Roboto/Roboto-Thin.ttf") format("truetype"), url("font/Roboto/Roboto-ThinItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("font/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+}
+body {
+  font-family: "roboto";
+}
+
 .head {
   margin-top: 10px;
   display: flex;
@@ -36,13 +48,14 @@
 }
 
 .heart {
-  font-size: 40px;
-  margin: 20px 0px 20px 0px;
+  font-size: 25px;
   position: absolute;
-  right: 40px;
+  right: 30px;
+  top: 15px;
   z-index: 2;
 }
 .heart__nolike {
+  color: #9356DC;
   opacity: 1;
 }
 .heart__nolike:hover {
@@ -50,9 +63,7 @@
   cursor: pointer;
 }
 .heart__like {
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  background-clip: text;
-  color: transparent;
+  color: #9356DC;
   opacity: 0;
 }
 .heart__like:hover {
@@ -115,15 +126,22 @@
   flex-direction: column;
   border-radius: 20px;
   margin: 0px 20px 0px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .plat__card__body__title {
   margin: 10px 0px 0px 0px;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .plat__card__body__subtitle {
+  font-size: 13px;
+  font-weight: 100;
   width: 100%;
-  margin: 0px;
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -132,19 +150,15 @@
   text-overflow: ellipsis;
 }
 .plat__card__body__subtitle__text {
-  text-align: left;
-  margin: 5px 0px 15px 0px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex: 8;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .plat__card__body__subtitle__price {
-  min-width: 80px;
-  text-align: right;
+  flex: 1;
+  width: 1px;
   font-weight: bold;
-  margin: 5px 0px 15px 0px;
 }
 .plat__card__check {
   width: 0px;
@@ -156,16 +170,16 @@
   text-align: center;
   padding: 20px 0px 20px 0px;
 }
-.plat__card__body:active + .plat__card__check {
+.plat__card__body:hover + .plat__card__check {
   width: 80px;
   font-size: 20px;
   cursor: pointer;
   visibility: visible;
-  transition: 500ms;
+  transition: width 500ms;
 }
-.plat__card__body:active + .plat__card__check i {
+.plat__card__body:hover + .plat__card__check i {
   transform: rotate(360deg);
-  transition: 500ms;
+  transition: transform 500ms;
 }
 
 .cta_button {
@@ -196,8 +210,9 @@
 }
 .footer__title {
   font-style: italic;
-  font-weight: 900;
+  font-weight: 500;
   padding-bottom: 20px;
+  font-family: "Shrikhand";
 }
 .footer__body {
   display: flex;
@@ -208,14 +223,18 @@
 }
 .footer__body i {
   margin-right: 10px;
+  width: 20px;
+}
+.footer__body a {
+  margin-top: -4px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
 }
 .footer__restau, .footer__partner {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-}
-.footer__restau p, .footer__partner p {
-  margin-top: 1px;
 }
 
 /*# sourceMappingURL=style_restaurant.css.map */

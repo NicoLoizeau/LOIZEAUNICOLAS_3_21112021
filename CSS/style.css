@@ -6,11 +6,6 @@
   font-family: "Shrikhand";
   src: url("font/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
 }
-p a {
-  font-family: "roboto";
-  font-weight: 400;
-}
-
 h1 h2 {
   font-family: "Shrikhand";
   font-weight: 100;
@@ -22,6 +17,9 @@ body {
   flex-direction: column;
   margin-left: 10%;
   text-decoration: none;
+  z-index: 2;
+  font-family: "roboto";
+  font-weight: 400;
 }
 
 body img {
@@ -199,7 +197,7 @@ body a {
   background-color: #99E2D0;
   position: absolute;
   right: 10px;
-  z-index: 2;
+  z-index: 3;
   padding: 7px 15px 0px 15px;
   border-radius: 2px;
 }
@@ -222,23 +220,37 @@ body a {
 }
 
 .heart {
-  position: absolute;
-  right: 10px;
   width: 2px;
   height: 2px;
   font-size: 30px;
-  padding: 20px 30px 0px 0px;
   color: #9356DC;
   transition: opacity 300ms;
+  z-index: 3;
 }
-.heart__nolike:hover {
+.heart__nolike {
+  position: absolute;
+}
+.heart__nolike:active {
   opacity: 0;
 }
 .heart__like {
+  position: absolute;
   opacity: 0;
 }
-.heart__like:hover {
+.heart__like:active {
   opacity: 1;
+}
+
+.lien {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+}
+
+.container {
+  position: relative;
 }
 
 .footer {
@@ -249,8 +261,9 @@ body a {
 }
 .footer__title {
   font-style: italic;
-  font-weight: 900;
+  font-weight: 500;
   padding-bottom: 20px;
+  font-family: "Shrikhand";
 }
 .footer__body {
   display: flex;
@@ -261,6 +274,7 @@ body a {
 }
 .footer__body i {
   margin-right: 10px;
+  width: 20px;
 }
 .footer__body a {
   margin-top: -4px;
