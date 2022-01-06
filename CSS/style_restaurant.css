@@ -11,19 +11,21 @@ body {
 }
 
 .head {
-  margin-top: 10px;
+  margin: 10px 20px 20px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   font-size: 20px;
-  text-align: left;
 }
 .head img {
-  width: 50%;
+  width: 65%;
+  margin-left: 30px;
 }
 .head i {
-  font-size: 30px;
-  margin: 10px 60px 10px 50px;
+  width: 20%;
+  font-size: 25px;
+  margin: 10px 0 0 30px;
+  color: black;
 }
 
 .top_img img {
@@ -41,6 +43,9 @@ body {
   top: -50px;
   margin-bottom: -50px;
 }
+.body_menu h1 {
+  font-family: "Shrikhand";
+}
 
 .name {
   display: flex;
@@ -48,9 +53,9 @@ body {
 }
 
 .heart {
-  font-size: 25px;
+  font-size: 30px;
   position: absolute;
-  right: 30px;
+  right: 15px;
   top: 15px;
   z-index: 2;
 }
@@ -74,7 +79,8 @@ body {
 
 .ligne {
   width: 50px;
-  margin-top: -15px;
+  margin-top: -5px;
+  padding-bottom: 10px;
   border-top: 3px solid #99E2D0;
 }
 
@@ -92,6 +98,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+.plat__title {
+  margin-bottom: 10px;
+}
 .plat__card {
   display: flex;
   flex-direction: row;
@@ -101,6 +110,7 @@ body {
   box-shadow: 3px 3px 5px silver;
   animation: loading_cards 1500ms;
   animation-fill-mode: both;
+  cursor: pointer;
 }
 .plat__card:nth-child(3) {
   animation-delay: 600ms;
@@ -138,7 +148,7 @@ body {
   text-overflow: ellipsis;
 }
 .plat__card__body__subtitle {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 100;
   width: 100%;
   margin-top: 5px;
@@ -150,6 +160,7 @@ body {
   text-overflow: ellipsis;
 }
 .plat__card__body__subtitle__text {
+  font-size: 15px;
   flex: 8;
   white-space: nowrap;
   overflow: hidden;
@@ -218,15 +229,11 @@ body {
   display: flex;
   flex-direction: column;
 }
-.footer__body p {
-  margin-top: -7px;
-}
 .footer__body i {
   margin-right: 10px;
-  width: 20px;
+  width: 25px;
 }
 .footer__body a {
-  margin-top: -4px;
   text-decoration: none;
   font-size: 20px;
   color: #fff;
@@ -235,6 +242,11 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  align-items: center;
+  margin-top: -20px;
+}
+.footer__other {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style_restaurant.css.map */
