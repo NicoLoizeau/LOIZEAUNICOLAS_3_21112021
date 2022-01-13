@@ -7,18 +7,18 @@ $dishcounter:7;
 $dishdelay:200ms;
 @font-face {
     font-family: "roboto";
-    src: url("font/Roboto/Roboto-Black.ttf") format('truetype'),
-    url("font/Roboto/Roboto-BlackItalic.ttf") format('truetype'),
-    url("font/Roboto/Roboto-Bold.ttf") format('truetype'),
-    url("font/Roboto/Roboto-BoldItalic.ttf") format('truetype'),
-    url("font/Roboto/Roboto-Italic.ttf") format('truetype'),
-    url("font/Roboto/Roboto-Light.ttf") format('truetype'),
-    url("font/Roboto/Roboto-LightItalic.ttf") format('truetype'),
-    url("font/Roboto/Roboto-Medium.ttf") format('truetype'),
-    url("font/Roboto/Roboto-MediumItalic.ttf") format('truetype'),
+    src: //url("font/Roboto/Roboto-Black.ttf") format('truetype'),
+//    url("font/Roboto/Roboto-BlackItalic.ttf") format('truetype'),
+//    url("font/Roboto/Roboto-Bold.ttf") format('truetype'),
+//    url("font/Roboto/Roboto-BoldItalic.ttf") format('truetype'),
+//    url("font/Roboto/Roboto-Italic.ttf") format('truetype'),
+//    url("font/Roboto/Roboto-Light.ttf") format('truetype'),
+//    url("font/Roboto/Roboto-LightItalic.ttf") format('truetype'),
+//    url("font/Roboto/Roboto-Medium.ttf") format('truetype'),
+//    url("font/Roboto/Roboto-MediumItalic.ttf") format('truetype'),
     url("font/Roboto/Roboto-Regular.ttf") format('truetype'),
     url("font/Roboto/Roboto-Thin.ttf") format('truetype'),
-    url("font/Roboto/Roboto-ThinItalic.ttf") format('truetype');
+//    url("font/Roboto/Roboto-ThinItalic.ttf") format('truetype');
 }
 @font-face {
     font-family: "Shrikhand";
@@ -26,6 +26,7 @@ $dishdelay:200ms;
 }
 body{
     font-family: "roboto";
+    font-weight: normal !important;
 }
 .head{
     margin: 10px 20px 20px 0;
@@ -35,6 +36,7 @@ body{
     font-size: 20px;
     img{
         width: 65%;
+        max-width: 500px;
         margin-left: 30px;
     }
     i{
@@ -48,7 +50,8 @@ body{
 
     img{
     width: 100%;
-     }
+    max-height: 800px;
+    }
 }
 .body_menu{
     display: flex;
@@ -60,6 +63,10 @@ body{
     position: relative;
     top: -50px;
     margin-bottom: -50px;
+    @media screen and (min-width: 1000px) {
+        flex-direction: row;
+        max-width: 100%;
+    }
     h1{
         font-family: "Shrikhand";
     }
@@ -67,6 +74,11 @@ body{
 .name{
     display: flex;
     justify-content: space-between;
+    @media screen and (min-width: 769px) {
+        width: 100%;
+        align-self: center;
+        text-align: center;; 
+    } 
 }
 .heart{
     font-size: 30px;
@@ -111,8 +123,13 @@ body{
 .plat{
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: 1000px){
+        width: 30%;
+        margin: 30px 10px 10px 10px;
+    }
     &__title{
         margin-bottom: 10px;
+        width: 100%;
     }
     &__card{
         display: flex;
@@ -147,7 +164,7 @@ body{
         }          
             &__subtitle{
                 font-size: 15px;
-                font-weight: 100;
+                font-weight: normal !important;
                 width: 100%;
                 margin-top: 5px;
                 display: flex;
@@ -162,6 +179,8 @@ body{
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    font-weight: normal;
+                    opacity: 0.6;
                 }
                 &__price{
                     flex: 1;
@@ -217,6 +236,11 @@ body{
     color: #fff;
     padding: 10px 0px 10px 20px;
     font-size: 20px;
+    @media screen and (min-width: 769px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;;    
+    }
     &__title{
         font-style: italic;
         font-weight: 500;

@@ -1,14 +1,13 @@
 @font-face {
   font-family: "roboto";
-  src: url("font/Roboto/Roboto-Black.ttf") format("truetype"), url("font/Roboto/Roboto-BlackItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Bold.ttf") format("truetype"), url("font/Roboto/Roboto-BoldItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Italic.ttf") format("truetype"), url("font/Roboto/Roboto-Light.ttf") format("truetype"), url("font/Roboto/Roboto-LightItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Medium.ttf") format("truetype"), url("font/Roboto/Roboto-MediumItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Regular.ttf") format("truetype"), url("font/Roboto/Roboto-Thin.ttf") format("truetype"), url("font/Roboto/Roboto-ThinItalic.ttf") format("truetype");
+  src: url("font/Roboto/Roboto-Regular.ttf") format("truetype"), url("font/Roboto/Roboto-Thin.ttf") format("truetype");
 }
 @font-face {
   font-family: "Shrikhand";
   src: url("font/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
 }
-h1 h2 {
-  font-family: "Shrikhand";
-  font-weight: 100;
+h1 {
+  font-weight: 900;
 }
 
 body {
@@ -19,18 +18,7 @@ body {
   text-decoration: none;
   z-index: 2;
   font-family: "roboto";
-  font-weight: 200;
-}
-
-body {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-left: 10%;
-  text-decoration: none;
-  z-index: 2;
-  font-family: "roboto";
-  font-weight: 200;
+  font-weight: initial;
 }
 body img {
   max-width: 100%;
@@ -64,9 +52,14 @@ body a {
   text-align: center;
   font-family: "roboto";
 }
+@media screen and (min-width: 769px) {
+  .body__head h1, .body__head h2 {
+    margin: 30px 0 0 0;
+  }
+}
 .body__head h2 {
   font-size: 20px;
-  font-weight: lighter;
+  font-weight: 100;
   color: grey;
 }
 .body__head__place {
@@ -87,6 +80,11 @@ body a {
   justify-content: center;
   flex-direction: column;
   background-color: #f2f2f2;
+}
+@media screen and (min-width: 769px) {
+  .body__head__cta {
+    width: 100%;
+  }
 }
 
 .cta_button {
@@ -118,6 +116,11 @@ body a {
 .fonctionnement h2 {
   margin-left: 20px;
 }
+@media screen and (min-width: 769px) {
+  .fonctionnement h2 {
+    margin-left: 75px;
+  }
+}
 
 .list {
   counter-reset: list_puce;
@@ -127,7 +130,7 @@ body a {
   .list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 }
 .list li {
@@ -146,7 +149,7 @@ body a {
 }
 @media screen and (min-width: 769px) {
   .list li {
-    max-width: 200px;
+    width: 25%;
   }
 }
 .list li i {
@@ -195,7 +198,7 @@ body a {
 }
 @media screen and (min-width: 769px) {
   .card_restaurant {
-    max-width: 45%;
+    width: 300px;
   }
 }
 .card_restaurant img {
@@ -261,6 +264,11 @@ body a {
   right: 20px;
   bottom: 25px;
 }
+@media screen and (min-width: 769px) {
+  .lien {
+    bottom: 60px;
+  }
+}
 
 .container {
   position: relative;
@@ -271,6 +279,13 @@ body a {
   color: #fff;
   padding: 10px 0px 10px 20px;
   font-size: 20px;
+}
+@media screen and (min-width: 769px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .footer__title {
   font-style: italic;

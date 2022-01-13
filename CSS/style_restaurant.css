@@ -1,6 +1,6 @@
 @font-face {
   font-family: "roboto";
-  src: url("font/Roboto/Roboto-Black.ttf") format("truetype"), url("font/Roboto/Roboto-BlackItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Bold.ttf") format("truetype"), url("font/Roboto/Roboto-BoldItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Italic.ttf") format("truetype"), url("font/Roboto/Roboto-Light.ttf") format("truetype"), url("font/Roboto/Roboto-LightItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Medium.ttf") format("truetype"), url("font/Roboto/Roboto-MediumItalic.ttf") format("truetype"), url("font/Roboto/Roboto-Regular.ttf") format("truetype"), url("font/Roboto/Roboto-Thin.ttf") format("truetype"), url("font/Roboto/Roboto-ThinItalic.ttf") format("truetype");
+  src: url("font/Roboto/Roboto-Regular.ttf") format("truetype"), url("font/Roboto/Roboto-Thin.ttf") format("truetype");
 }
 @font-face {
   font-family: "Shrikhand";
@@ -8,6 +8,7 @@
 }
 body {
   font-family: "roboto";
+  font-weight: normal !important;
 }
 
 .head {
@@ -19,6 +20,7 @@ body {
 }
 .head img {
   width: 65%;
+  max-width: 500px;
   margin-left: 30px;
 }
 .head i {
@@ -30,6 +32,7 @@ body {
 
 .top_img img {
   width: 100%;
+  max-height: 800px;
 }
 
 .body_menu {
@@ -43,6 +46,12 @@ body {
   top: -50px;
   margin-bottom: -50px;
 }
+@media screen and (min-width: 1000px) {
+  .body_menu {
+    flex-direction: row;
+    max-width: 100%;
+  }
+}
 .body_menu h1 {
   font-family: "Shrikhand";
 }
@@ -50,6 +59,13 @@ body {
 .name {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (min-width: 769px) {
+  .name {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+  }
 }
 
 .heart {
@@ -98,8 +114,15 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 1000px) {
+  .plat {
+    width: 30%;
+    margin: 30px 10px 10px 10px;
+  }
+}
 .plat__title {
   margin-bottom: 10px;
+  width: 100%;
 }
 .plat__card {
   display: flex;
@@ -149,7 +172,7 @@ body {
 }
 .plat__card__body__subtitle {
   font-size: 15px;
-  font-weight: 100;
+  font-weight: normal !important;
   width: 100%;
   margin-top: 5px;
   display: flex;
@@ -165,6 +188,8 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: normal;
+  opacity: 0.6;
 }
 .plat__card__body__subtitle__price {
   flex: 1;
@@ -218,6 +243,13 @@ body {
   color: #fff;
   padding: 10px 0px 10px 20px;
   font-size: 20px;
+}
+@media screen and (min-width: 769px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .footer__title {
   font-style: italic;
