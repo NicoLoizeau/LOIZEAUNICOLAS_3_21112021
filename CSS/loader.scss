@@ -1,0 +1,70 @@
+$primary_color:#9356DC;
+$secondary_color:#FF79DA;
+$tertiary_color:#99E2D0;
+$background_general:#f2f2f2;
+
+
+.loader {
+    $colors: $primary_color, $secondary_color, $tertiary_color;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: $background_general;
+    padding-top: 50px;
+    animation: all 3s ease-out ;
+    animation-fill-mode: both;
+
+    .dot {
+      position: relative;
+      width: 2em;
+      height: 2em;
+      margin: 0.8em;
+      border-radius: 50%;
+  
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        border-radius: inherit;
+        animation: wave 1s ease-out infinite ;
+      }
+  
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          background: nth($colors, $i);
+  
+          &::before {
+            animation-delay: $i * 0.2s;
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes wave {
+    50%,
+    75% {
+      transform: scale(2.5);
+    }
+  
+    80%,
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes all {
+    0%, 99%
+    {
+        height: 100%;
+        opacity: 1;
+    }
+    100%{
+        height: 0%;
+        opacity: 0;
+    }
+  }
