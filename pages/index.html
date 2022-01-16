@@ -7,8 +7,14 @@
             <title>homyfood</title> 
             <link rel="stylesheet" href="../CSS/normalize.css">
             <link rel="stylesheet" href="../CSS/font_awesome/fontawesome-free-6.0.0-beta2-web/css/all.css">
+            <link rel="stylesheet" href="../CSS/loader.css">
         </head>
         <body>
+            <div class="loader">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
             <header>
                 <div class="head">
                     <div>
@@ -24,8 +30,10 @@
                         </div>
                         <div class="body__head__cta">
                             <h1>Réservez le menu qui vous convient</h1>
-                            <h2>Découvrez des restaurants d'exeption, séléctionnés par nos soins.</h2>
-                            <button class="cta_button">Explorer nos restaurants</button>
+                            <h2>Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
+                            <div class="cta_button">
+                                <button>Explorer nos restaurants</button>
+                            </div>
                         </div>
                     </section>
                     <section class="fonctionnement">
@@ -46,9 +54,9 @@
                         </ol>                 
                     </section>
                     <section class="cards">
-                        <h3>Restaurants</h3>
-                        <div class="card_restaurant">
-                            <a href="la_palette_du_gout.html">
+                        <h2>Restaurants</h2>
+                        <div class="container">
+                            <a class="card_restaurant" href="la_palette_du_gout.html">
                                 <img src="../images/La_palette_du_gout.jpg" alt="plat">
                                 <p class="card_restaurant__new">Nouveau</p>
                                 <div class="card_restaurant__body">
@@ -56,62 +64,74 @@
                                         <p class="card_restaurant__text__name">La palette du goût</p>
                                         <p>Ménilmontant</p>
                                     </div>
-                                </div>
+                                </div>                                   
                             </a>
-                            <div>
+                            <div class="lien">
                                 <i class="heart heart__nolike far fa-heart"></i>
                                 <i class="heart heart__like fas fa-heart"></i>
                             </div>
                         </div>
-                        <a class="card_restaurant" href="la_note_enchantee.html">
-                            <img src="../images/la_note_enchantee.jpg" alt="plat">
-                            <p class="card_restaurant__new">Nouveau</p>
-                            <div class="card_restaurant__body">
-                                <div class="card_restaurant__text">
-                                    <p class="card_restaurant__text__name">La note enchantée</p>
-                                    <p>Charonne</p>
+                        <div class="container">
+                            <a class="card_restaurant" href="la_note_enchantee.html">
+                                <img src="../images/la_note_enchantee.jpg" alt="plat">
+                                <p class="card_restaurant__new">Nouveau</p>
+                                <div class="card_restaurant__body">
+                                    <div class="card_restaurant__text">
+                                        <p class="card_restaurant__text__name">La note enchantée</p>
+                                        <p>Charonne</p>
+                                    </div>
                                 </div>
+                            </a>
+                            <div class="lien">
                                 <i class="heart heart__nolike far fa-heart"></i>
                                 <i class="heart heart__like fas fa-heart"></i>
                             </div>
-                        </a>
-                        <a class="card_restaurant" href="a_la_francaise.html">
-                            <img src="../images/a_la_francaise.jpg" alt="plat">
-                            <div class="card_restaurant__body">
-                                <div class="card_restaurant__text">
-                                    <p class="card_restaurant__text__name">A la française</p>
-                                    <p>Cité Rouge</p>
+                        </div>
+                        <div class="container">
+                            <a class="card_restaurant" href="a_la_francaise.html">
+                                <img src="../images/a_la_francaise.jpg" alt="plat">
+                                <div class="card_restaurant__body">
+                                    <div class="card_restaurant__text">
+                                        <p class="card_restaurant__text__name">A la française</p>
+                                        <p>Cité Rouge</p>
+                                    </div>
                                 </div>
+                            </a>
+                            <div class="lien">
                                 <i class="heart heart__nolike far fa-heart"></i>
                                 <i class="heart heart__like fas fa-heart"></i>
                             </div>
-                        </a>
-                        <a class="card_restaurant" href="le_delice_des_sens.html">
-                            <img src="../images/le_delice_des_sens.jpg" alt="plat">
-                            <div class="card_restaurant__body">
-                                <div class="card_restaurant__text">
-                                    <p class="card_restaurant__text__name">Le délice des sens</p>
-                                    <p>Folie-Méricourt</p>
+                        </div>
+                        <div class="container">
+                            <a class="card_restaurant" href="le_delice_des_sens.html">
+                                <img src="../images/le_delice_des_sens.jpg" alt="plat">
+                                <div class="card_restaurant__body">
+                                    <div class="card_restaurant__text">
+                                        <p class="card_restaurant__text__name">Le délice des sens</p>
+                                        <p>Folie-Méricourt</p>
+                                    </div>
                                 </div>
+                            </a>
+                            <div class="lien">
                                 <i class="heart heart__nolike far fa-heart"></i>
                                 <i class="heart heart__like fas fa-heart"></i>
                             </div>
-                        </a>
+                        </div>
                     </section>
                 </main>
                 <footer class="footer">
-                    <h2 class="footer__title">homyfood</h2>
+                    <h2 class="footer__title">ohmyfood</h2>
                     <div class="footer__body">
-                        <div class="footer__restau">
+                        <a class="footer__restau" href="#">
                             <i class="fas fa-utensils"></i>
                             <p>Proposer un restaurant</p>
-                        </div>
-                        <div class="footer__partner">
+                        </a>
+                        <a class="footer__partner" href="#">
                             <i class="fas fa-hands-helping"></i>
                             <P>Devenir partenaire</P>
-                        </div>
-                        <p>Mentions légales</p>
-                        <p>Contact</p>
+                        </a>
+                        <a class="footer__other" href="#">Mentions légales</a>
+                        <a class="footer__other" href="mailto:contact@homyfood.com">Contact</a>
                     </div>
                 </footer>
             </body>

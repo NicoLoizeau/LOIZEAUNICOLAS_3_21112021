@@ -1,21 +1,38 @@
+@font-face {
+  font-family: "roboto";
+  src: url("font/Roboto/Roboto-Regular.ttf") format("truetype"), url("font/Roboto/Roboto-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("font/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+}
+body {
+  font-family: "roboto";
+  font-weight: normal !important;
+}
+
 .head {
-  margin-top: 10px;
+  margin: 10px 20px 20px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   font-size: 20px;
-  text-align: left;
 }
 .head img {
-  width: 50%;
+  width: 65%;
+  max-width: 500px;
+  margin-left: 30px;
 }
 .head i {
-  font-size: 30px;
-  margin: 10px 60px 10px 50px;
+  width: 20%;
+  font-size: 25px;
+  margin: 10px 0 0 30px;
+  color: black;
 }
 
 .top_img img {
   width: 100%;
+  max-height: 800px;
 }
 
 .body_menu {
@@ -29,27 +46,57 @@
   top: -50px;
   margin-bottom: -50px;
 }
+@media screen and (min-width: 1000px) {
+  .body_menu {
+    flex-direction: row;
+    max-width: 100%;
+  }
+}
+.body_menu h1 {
+  font-family: "Shrikhand";
+}
 
 .name {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (min-width: 769px) {
+  .name {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+  }
+}
 
 .heart {
-  font-size: 40px;
-  margin: 20px 0px 20px 0px;
-  display: block;
+  font-size: 30px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 2;
 }
 .heart__nolike {
+  color: #9356DC;
   opacity: 1;
 }
+.heart__nolike:hover {
+  opacity: 0;
+  cursor: pointer;
+}
 .heart__like {
-  color: red;
+  color: #9356DC;
+  opacity: 0;
+}
+.heart__like:hover {
+  transition: 300ms;
+  opacity: 1;
+  cursor: pointer;
 }
 
 .ligne {
   width: 50px;
-  margin-top: -15px;
+  margin-top: -5px;
+  padding-bottom: 10px;
   border-top: 3px solid #99E2D0;
 }
 
@@ -67,6 +114,16 @@
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 1000px) {
+  .plat {
+    width: 30%;
+    margin: 30px 10px 10px 10px;
+  }
+}
+.plat__title {
+  margin-bottom: 10px;
+  width: 100%;
+}
 .plat__card {
   display: flex;
   flex-direction: row;
@@ -76,6 +133,7 @@
   box-shadow: 3px 3px 5px silver;
   animation: loading_cards 1500ms;
   animation-fill-mode: both;
+  cursor: pointer;
 }
 .plat__card:nth-child(3) {
   animation-delay: 600ms;
@@ -101,15 +159,22 @@
   flex-direction: column;
   border-radius: 20px;
   margin: 0px 20px 0px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .plat__card__body__title {
   margin: 10px 0px 0px 0px;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .plat__card__body__subtitle {
+  font-size: 15px;
+  font-weight: normal !important;
   width: 100%;
-  margin: 0px;
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -118,19 +183,18 @@
   text-overflow: ellipsis;
 }
 .plat__card__body__subtitle__text {
-  text-align: left;
-  margin: 5px 0px 15px 0px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  font-size: 15px;
+  flex: 8;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: normal;
+  opacity: 0.6;
 }
 .plat__card__body__subtitle__price {
-  min-width: 80px;
-  text-align: right;
+  flex: 1;
+  width: 1px;
   font-weight: bold;
-  margin: 5px 0px 15px 0px;
 }
 .plat__card__check {
   width: 0px;
@@ -147,11 +211,11 @@
   font-size: 20px;
   cursor: pointer;
   visibility: visible;
-  transition: 500ms;
+  transition: width 500ms;
 }
 .plat__card__body:hover + .plat__card__check i {
   transform: rotate(360deg);
-  transition: 500ms;
+  transition: transform 500ms;
 }
 
 .cta_button {
@@ -180,28 +244,41 @@
   padding: 10px 0px 10px 20px;
   font-size: 20px;
 }
+@media screen and (min-width: 769px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .footer__title {
   font-style: italic;
-  font-weight: 900;
+  font-weight: 500;
   padding-bottom: 20px;
+  font-family: "Shrikhand";
 }
 .footer__body {
   display: flex;
   flex-direction: column;
 }
-.footer__body p {
-  margin-top: -7px;
-}
 .footer__body i {
   margin-right: 10px;
+  width: 25px;
+}
+.footer__body a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
 }
 .footer__restau, .footer__partner {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  align-items: center;
+  margin-top: -20px;
 }
-.footer__restau p, .footer__partner p {
-  margin-top: 1px;
+.footer__other {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style_restaurant.css.map */
