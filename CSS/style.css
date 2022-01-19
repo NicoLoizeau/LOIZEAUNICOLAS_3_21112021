@@ -246,14 +246,14 @@ body a {
 .heart__nolike {
   position: absolute;
 }
-.heart__nolike:active {
+.heart__nolike:hover {
   opacity: 0;
 }
 .heart__like {
   position: absolute;
   opacity: 0;
 }
-.heart__like:active {
+.heart__like:hover {
   opacity: 1;
 }
 

@@ -29,6 +29,11 @@ body {
   margin: 10px 0 0 30px;
   color: black;
 }
+@media screen and (min-width: 1000px) {
+  .head i {
+    font-size: 100px;
+  }
+}
 
 .top_img img {
   width: 100%;
