@@ -244,14 +244,14 @@ body a{
     z-index: 3;
     &__nolike{
         position: absolute;
-        &:active{
+        &:hover{
             opacity: 0;
         }
     }
     &__like{
         position: absolute;
         opacity: 0;
-        &:active{
+        &:hover{
             opacity: 1;
         }
     }
