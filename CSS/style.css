@@ -111,6 +111,8 @@ body a {
 }
 .cta_button button:hover {
   cursor: pointer;
+  box-shadow: silver 7px 7px 7px;
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
 }
 
 .fonctionnement h2 {
