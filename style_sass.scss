@@ -2,6 +2,7 @@ $primary_color:#9356DC;
 $secondary_color:#FF79DA;
 $tertiary_color:#99E2D0;
 $button:linear-gradient(to bottom right, $secondary_color, $primary_color);
+$button_active:linear-gradient(to bottom right, lighten($secondary_color, 5%), lighten($primary_color, 5%));
 $background_general:#f2f2f2;
 
 @font-face {
@@ -122,6 +123,8 @@ body a{
         box-shadow:silver 3px 3px 3px;
         &:hover{
             cursor: pointer;
+            box-shadow: silver 7px 7px 7px;
+            background: $button_active;
         }
     }
 }
